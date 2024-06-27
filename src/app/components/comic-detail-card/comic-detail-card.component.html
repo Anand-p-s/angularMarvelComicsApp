@@ -1,0 +1,31 @@
+<div class="grid nested-grid mt-6" style="margin-left: 15%; margin-right: 15%;">
+    <div class="col-4">
+        <img class="lg:w-10 w-11" alt="Card" [src]="comicDetails.thumbnail.path+'.'+comicDetails.thumbnail.extension" />
+    </div>
+    <div class="col-8">
+        <div class="grid">
+            <div class="col-12">
+                <h1 class="text-xl font-bold">{{ comicDetails.title }}</h1>
+            </div>
+            <div class="col-12">
+                <h1 class="text-xs font-bold">PUBLISHED:</h1>
+                <h1 class="text-base font-normal">{{ comicDetails.dates[0].date | date }}</h1>
+            </div>
+            <ng-container *ngFor="let creator of comicDetails.creators.items">
+                <div *ngIf="creator.role == 'writer'" class="col-6">
+                    <h1 class="text-xs font-bold">WRITER:</h1>
+                    <h1 class="text-base font-normal">{{ creator.name }}</h1>
+                </div>
+
+                <div *ngIf="creator.role == 'editor'" class="col-6">
+                    <h1 class="text-xs font-bold">EDITOR:</h1>
+                    <h1 class="text-base font-normal">{{ creator.name }}</h1>
+                </div>
+            </ng-container>
+
+            <div class="col-12">
+                <h1 class="text-base font-normal line-height-3">{{ comicDetails.description }}</h1>
+            </div>
+        </div>
+    </div>
+</div>

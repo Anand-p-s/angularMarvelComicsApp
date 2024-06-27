@@ -1,0 +1,6 @@
+<div class="flex flex-wrap gap-3 justify-content-center align-items-center p-3">
+    <ng-container *ngFor="let character of characters">
+        <app-character-card [character]="character"
+            class="flex mt-5 transition-ease-in-out cursor-pointer transition-duration-500  hover:shadow-8" />
+    </ng-container>
+</div>

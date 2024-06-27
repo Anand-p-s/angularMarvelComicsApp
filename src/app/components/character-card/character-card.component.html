@@ -1,0 +1,9 @@
+<p-card [style]="{ width: '250px' }">
+    <ng-template pTemplate="header">
+        <img alt="Card" [src]="character.thumbnail.path+'.'+character.thumbnail.extension" />
+    </ng-template>
+
+    <ng-template  pTemplate="body">
+        <h2 class="text-base font-semibold">{{ character.name }}</h2>
+    </ng-template>
+</p-card>
