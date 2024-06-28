@@ -1,0 +1,7 @@
+<div class="flex w-full lg:h-26rem md:h-26rem h-17rem background-image"
+    [ngStyle]="{backgroundImage: 'url(' + characterDetails.thumbnail.path + '.' + characterDetails.thumbnail.extension + ')'}">
+    <div class="text-white relative lg:mt-8 md:mx-8 mt-4 mx-5 overflow-auto font-bold">
+        <h1 class="shadow-text">{{ characterDetails.name | uppercase }}</h1>
+        <p class="shadow-text">{{ characterDetails.description }}</p>
+    </div>    
+</div>

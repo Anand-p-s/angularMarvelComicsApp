@@ -1,7 +1,10 @@
-<p-card [style]="{ width: '250px' }">
-    <ng-template pTemplate="header">
-        <img alt="Card" [src]="comic.thumbnail.path+'.'+comic.thumbnail.extension" />
-    </ng-template>
+<div class="transition-ease-in-out cursor-pointer transition-duration-500  hover:shadow-8" routerLink="/comic-details/{{ comic.id }}">
+    <p-card [style]="{ width: '250px' }">
+        <ng-template pTemplate="header">
+            <img alt="Card" [src]="comic.thumbnail.path+'.'+comic.thumbnail.extension" />
+        </ng-template>
+    
+        <p class="m-0 p-0 text-sm font-semibold ">{{ comic.title }}</p>
+    </p-card>
+</div>
 
-    <p class="m-0 p-0 text-sm font-semibold ">{{ comic.title }}</p>
-</p-card>

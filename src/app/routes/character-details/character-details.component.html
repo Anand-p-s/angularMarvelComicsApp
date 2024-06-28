@@ -1,0 +1,13 @@
+<app-character-detail-card [characterDetails]="characterDetails" />
+
+<div class="mt-5 mx-5 text-lg font-semibold uppercase">
+    Related Comics
+    <p-divider type="solid" />  
+</div>
+
+
+<div class="flex flex-wrap justify-content-center gap-3 mt-5">
+    <ng-container *ngFor="let comic of comics" class="flex">
+        <app-comic-card [comic]="comic" />
+    </ng-container>
+</div>

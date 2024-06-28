@@ -19,6 +19,8 @@ import { ComicDetailCardComponent } from './components/comic-detail-card/comic-d
 import { CharactersComponent } from './routes/characters/characters.component';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
 import { LoaderSpinnerComponent } from './components/loader-spinner/loader-spinner.component';
+import { CharacterDetailCardComponent } from './components/character-detail-card/character-detail-card.component';
+import { CharacterDetailsComponent } from './routes/character-details/character-details.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { LoaderSpinnerComponent } from './components/loader-spinner/loader-spinn
     CharactersComponent,
     CharacterCardComponent,
     LoaderSpinnerComponent,
+    CharacterDetailCardComponent,
+    CharacterDetailsComponent,
   ],
   imports: [
     BrowserModule,
