@@ -3,13 +3,11 @@
         <h1 class="text-lg font-bold lg:ml-5 ml-3">NEW THIS WEEK</h1>
     </div>
 
-    <div class="col-12">
+    <div class="col-12 mb-5">
         <section class="flex flex-wrap justify-content-center gap-3 mt-5">
             <ng-container *ngFor="let comic of comics" class="flex">
                 <app-comic-card [comic]="comic" />
             </ng-container>
         </section>
     </div>
-
-   
 </div>

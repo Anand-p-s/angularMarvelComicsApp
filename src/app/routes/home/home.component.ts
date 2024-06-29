@@ -12,6 +12,10 @@ export class HomeComponent implements OnInit {
   constructor(private db: DbService) {}
 
   ngOnInit(): void {
+    this.getComicsThisWeek();
+  }
+
+  getComicsThisWeek() {
     this.db.getComicsThisWeek().subscribe((result) => {
       console.log(result.data.results);
       this.comics = result.data.results;

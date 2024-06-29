@@ -12,10 +12,18 @@ export class CharactersComponent implements OnInit {
   constructor(private db: DbService){}
 
   ngOnInit(): void {
-      this.db.getCharacters(this.limit).subscribe((result) => {
-        this.characters = result.data.results;
-        console.log(this.characters);
-        
-      })
+    this.getCharacters();
+  }
+
+  getCharacters() {
+     this.db.getCharacters(this.limit).subscribe((result) => {
+       this.characters = result.data.results;
+       console.log(this.characters);
+     });
+  }
+
+  loadMore() {
+    this.limit += 10;
+    this.getCharacters();
   }
 }

@@ -34,7 +34,7 @@ export class DbService {
     const hash = this.generateHash(timeStamp);
 
     return this.http.get(
-      `${this.apiUrl}comics?dateDescriptor=thisWeek&limit=15&apikey=${this.publicKey}&ts=${timeStamp}&hash=${hash}`
+      `${this.apiUrl}comics?dateDescriptor=thisWeek&orderBy=-onsaleDate&limit=10&apikey=${this.publicKey}&ts=${timeStamp}&hash=${hash}`
     );
   }
 
